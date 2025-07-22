@@ -1,0 +1,1 @@
+curl -X PUT -H "Content-Type: application/json" --data @/script/pg-connector.json http://localhost:8083/connectors/pg-connector/config

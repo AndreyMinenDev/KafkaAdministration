@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ConsumerApp
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9093,localhost:9095,localhost:9097}
+
+server:
+  port: 8082
+
+kafka:
+  topics:
+    users: ${KAFKA_TOPIC_USERS:topic_users}
+    orders: ${KAFKA_TOPIC_ORDERS:topic_orders}
