@@ -135,7 +135,7 @@ services:
       dockerfile: ./ConsumerApp/consumer.Dockerfile
     container_name: consumer  
     environment:
-      - KAFKA_SERVERS=kafka-0:9092,kafka-1:9092,kafka-2:9092
+      - KAFKA_BOOTSTRAP_SERVERS=kafka-0:9092,kafka-1:9092,kafka-2:9092
       - KAFKA_TOPIC_USERS=topic_users
       - KAFKA_TOPIC_ORDERS=topic_orders
     depends_on:
