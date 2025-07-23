@@ -45,7 +45,7 @@
     curl http://localhost:8083/connectors/pg-connector/status
     ```
 
-4. Откройте браузер и перейдите на `http://localhost:8080`, чтобы зайти в Kafka UI и увидеть сообщения в топиках `topic_users` и `topic_orders`.
+4. Откройте браузер и перейдите на `http://localhost:8080`, чтобы зайти в Kafka UI и увидеть сообщения в топиках `customers.public.users` и `customers.public.orders`.
 
 5. Перейдите на `http://localhost:9876/metrics`, убедитесь, что Kafka Connect передает метрики в текстовом формате Prometheus.
 

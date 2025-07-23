@@ -10,5 +10,5 @@ server:
 
 kafka:
   topics:
-    users: ${KAFKA_TOPIC_USERS:topic_users}
-    orders: ${KAFKA_TOPIC_ORDERS:topic_orders}
+    users: ${KAFKA_TOPIC_USERS:customers.public.users}
+    orders: ${KAFKA_TOPIC_ORDERS:customers.public.orders}

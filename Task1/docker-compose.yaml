@@ -109,7 +109,7 @@ services:
 
       CONNECT_PLUGIN_PATH: /usr/share/java,/etc/kafka-connect/jars
     volumes:
-      - ./confluent-hub-components/:/etc/kafka-connect/jars
+      - ./confluent-components/:/etc/kafka-connect/jars
     networks:
       - kafka_net
 
@@ -132,12 +132,12 @@ services:
 
   consumer:
     build:
-      dockerfile: ./ConsumerApp/consumer.Dockerfile
+      dockerfile: consumer.Dockerfile
     container_name: consumer  
     environment:
       - KAFKA_BOOTSTRAP_SERVERS=kafka-0:9092,kafka-1:9092,kafka-2:9092
-      - KAFKA_TOPIC_USERS=topic_users
-      - KAFKA_TOPIC_ORDERS=topic_orders
+      - KAFKA_TOPIC_USERS=customers.public.users
+      - KAFKA_TOPIC_ORDERS=customers.public.orders
     depends_on:
       - kafka-0
       - kafka-1

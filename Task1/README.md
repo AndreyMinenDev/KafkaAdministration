@@ -31,7 +31,7 @@
     - Kafka UI для визуализации сообщений.
 	- База данных Postgres.  (При запуске будет созданы и наполнены таблицы `users` и `orders`) 
 	- Kafka Connect для запуска подключения к БД.
-    - Приложение с консумером для просмотра сообщений из топиков `topic_users` и `topic_orders`).
+    - Приложение с консумером для просмотра сообщений из топиков `customers.public.users` и `customers.public.orders`).
 
 3. Для запуска Debezium Connector в папке Task1 необходимо выполнить команду (в Windows используем GitBash):
     ```
@@ -45,7 +45,7 @@
 
 5. Откройте браузер и перейдите на `http://localhost:8080`, чтобы зайти в Kafka UI и увидеть сообщения в топиках `customers.public.users` и `customers.public.orders`.
 
-6. Cообщения из топиков `topic_users` и `topic_orders` можно посмотреть в логах приложения `ConsumerApp` выполнив команду:
+6. Cообщения из топиков `customers.public.users` и `customers.public.orders` можно посмотреть в логах приложения `ConsumerApp` выполнив команду:
     ```
     docker-compose logs -f consumer
     ```
